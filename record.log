@@ -1,0 +1,384 @@
+2021-09-23 18:07:22,703 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 18:07:28,392 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 18:07:28] "GET / HTTP/1.1" 200 -
+2021-09-23 18:07:28,518 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 18:07:28] "GET /swagger.json HTTP/1.1" 200 -
+2021-09-23 18:07:28,609 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 18:07:28] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2021-09-23 18:07:32,436 INFO app Thread-4 : <class 'str'>
+2021-09-23 18:07:32,444 INFO app Thread-4 : An order was received called "string"
+2021-09-23 18:07:32,444 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 18:07:32] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 18:07:45,199 INFO werkzeug Thread-6 : 127.0.0.1 - - [23/Sep/2021 18:07:45] "POST /Orders HTTP/1.1" 308 -
+2021-09-23 18:07:45,210 INFO app Thread-7 : <class 'str'>
+2021-09-23 18:07:45,210 INFO app Thread-7 : An order was received called "asdb"
+2021-09-23 18:07:45,211 INFO werkzeug Thread-7 : 127.0.0.1 - - [23/Sep/2021 18:07:45] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 18:08:11,649 INFO werkzeug Thread-8 : 127.0.0.1 - - [23/Sep/2021 18:08:11] "GET /Orders HTTP/1.1" 308 -
+2021-09-23 18:08:12,171 ERROR app Thread-9 : Exception on /Orders/ [GET]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_restplus\api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_restplus\resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\ohadv\Desktop\yammi - app\routes\orders.py", line 17, in get
+    db_utils.filter_last_day_orders()
+  File "C:\Users\ohadv\Desktop\yammi - app\utils\db_utils.py", line 14, in filter_last_day_orders
+    date_object = datetime.strptime(order['date'], '%Y-%m-%d').date() # cast to date object
+TypeError: strptime() argument 1 must be str, not datetime.datetime
+2021-09-23 18:08:12,185 INFO werkzeug Thread-9 : 127.0.0.1 - - [23/Sep/2021 18:08:12] "GET /Orders/ HTTP/1.1" 500 -
+2021-09-23 18:08:45,457 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 18:08:48,027 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 18:08:48] "GET / HTTP/1.1" 200 -
+2021-09-23 18:08:48,226 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 18:08:48] "GET /swagger.json HTTP/1.1" 200 -
+2021-09-23 18:08:48,267 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 18:08:48] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2021-09-23 18:08:51,877 INFO app Thread-4 : <class 'str'>
+2021-09-23 18:08:51,887 INFO app Thread-4 : An order was received called "string"
+2021-09-23 18:08:51,888 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 18:08:51] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 18:08:54,971 INFO app Thread-5 : <class 'str'>
+2021-09-23 18:08:54,972 INFO app Thread-5 : An order was received called "ff"
+2021-09-23 18:08:54,972 INFO werkzeug Thread-5 : 127.0.0.1 - - [23/Sep/2021 18:08:54] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 18:08:59,806 INFO app Thread-6 : Retrieved 2 orders from the last day 
+2021-09-23 18:08:59,807 INFO werkzeug Thread-6 : 127.0.0.1 - - [23/Sep/2021 18:08:59] "GET /Orders/ HTTP/1.1" 200 -
+2021-09-23 18:09:47,644 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 18:09:49,993 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 18:09:49] "GET / HTTP/1.1" 200 -
+2021-09-23 18:09:50,216 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 18:09:50] "GET /swagger.json HTTP/1.1" 200 -
+2021-09-23 18:09:50,227 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 18:09:50] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2021-09-23 18:09:54,527 INFO app Thread-4 : <class 'str'>
+2021-09-23 18:09:54,536 INFO app Thread-4 : An order was received called "string"
+2021-09-23 18:09:54,538 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 18:09:54] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 18:09:55,826 INFO app Thread-5 : <class 'str'>
+2021-09-23 18:09:55,826 INFO app Thread-5 : An order was received called "string"
+2021-09-23 18:09:55,827 INFO werkzeug Thread-5 : 127.0.0.1 - - [23/Sep/2021 18:09:55] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 18:10:00,153 INFO app Thread-6 : Retrieved 2 orders from the last day 
+2021-09-23 18:10:00,154 ERROR app Thread-6 : Exception on /Orders/ [GET]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_restplus\api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_restplus\resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\ohadv\Desktop\yammi - app\routes\orders.py", line 19, in get
+    return {orders_response}
+TypeError: unhashable type: 'list'
+2021-09-23 18:10:00,157 INFO werkzeug Thread-6 : 127.0.0.1 - - [23/Sep/2021 18:10:00] "GET /Orders/ HTTP/1.1" 500 -
+2021-09-23 18:11:18,454 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 18:11:20,623 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 18:11:20] "GET / HTTP/1.1" 200 -
+2021-09-23 18:11:20,747 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 18:11:20] "GET /swagger.json HTTP/1.1" 200 -
+2021-09-23 18:11:20,838 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 18:11:20] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2021-09-23 18:11:25,350 INFO app Thread-4 : <class 'str'>
+2021-09-23 18:11:25,359 INFO app Thread-4 : An order was received called "string"
+2021-09-23 18:11:25,361 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 18:11:25] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 18:11:26,932 INFO app Thread-5 : <class 'str'>
+2021-09-23 18:11:26,932 INFO app Thread-5 : An order was received called "string"
+2021-09-23 18:11:26,933 INFO werkzeug Thread-5 : 127.0.0.1 - - [23/Sep/2021 18:11:26] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 18:11:31,019 INFO app Thread-6 : Retrieved 2 orders from the last day 
+2021-09-23 18:11:31,020 ERROR app Thread-6 : Exception on /Orders/ [GET]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_restplus\api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_restplus\resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\ohadv\Desktop\yammi - app\routes\orders.py", line 19, in get
+    return {orders_response}
+TypeError: unhashable type: 'set'
+2021-09-23 18:11:31,034 INFO werkzeug Thread-6 : 127.0.0.1 - - [23/Sep/2021 18:11:31] "GET /Orders/ HTTP/1.1" 500 -
+2021-09-23 18:12:44,636 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 18:12:47,956 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 18:12:47] "GET / HTTP/1.1" 200 -
+2021-09-23 18:12:48,090 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 18:12:48] "GET /swagger.json HTTP/1.1" 200 -
+2021-09-23 18:12:48,156 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 18:12:48] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2021-09-23 18:12:51,435 INFO app Thread-4 : <class 'str'>
+2021-09-23 18:12:51,444 INFO app Thread-4 : An order was received called "string"
+2021-09-23 18:12:51,446 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 18:12:51] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 18:12:57,142 INFO app Thread-5 : Retrieved 1 orders from the last day 
+2021-09-23 18:12:57,143 ERROR app Thread-5 : Exception on /Orders/ [GET]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_restplus\api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_restplus\resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\ohadv\Desktop\yammi - app\routes\orders.py", line 23, in get
+    return Response(json.dumps(orders_response),  mimetype='application/json')
+  File "C:\ProgramData\Anaconda3\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\ProgramData\Anaconda3\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\ProgramData\Anaconda3\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\ProgramData\Anaconda3\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type set is not JSON serializable
+2021-09-23 18:12:57,149 INFO werkzeug Thread-5 : 127.0.0.1 - - [23/Sep/2021 18:12:57] "GET /Orders/ HTTP/1.1" 500 -
+2021-09-23 18:13:21,305 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 18:13:22,222 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 18:13:22] "GET / HTTP/1.1" 200 -
+2021-09-23 18:13:22,359 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 18:13:22] "GET /swagger.json HTTP/1.1" 200 -
+2021-09-23 18:13:22,445 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 18:13:22] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2021-09-23 18:13:25,890 INFO app Thread-4 : <class 'str'>
+2021-09-23 18:13:25,899 INFO app Thread-4 : An order was received called "string"
+2021-09-23 18:13:25,901 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 18:13:25] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 18:13:30,348 INFO app Thread-5 : Retrieved 1 orders from the last day 
+2021-09-23 18:13:30,348 INFO werkzeug Thread-5 : 127.0.0.1 - - [23/Sep/2021 18:13:30] "GET /Orders/ HTTP/1.1" 200 -
+2021-09-23 18:14:59,728 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 18:15:02,536 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 18:15:02] "GET / HTTP/1.1" 200 -
+2021-09-23 18:15:02,664 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 18:15:02] "GET /swagger.json HTTP/1.1" 200 -
+2021-09-23 18:15:02,752 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 18:15:02] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2021-09-23 18:15:06,445 INFO app Thread-4 : <class 'str'>
+2021-09-23 18:15:06,454 INFO app Thread-4 : An order was received called "string"
+2021-09-23 18:15:06,456 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 18:15:06] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 18:15:10,716 INFO app Thread-5 : Retrieved 1 orders from the last day 
+2021-09-23 18:15:10,716 ERROR app Thread-5 : Exception on /Orders/ [GET]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_restplus\api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_restplus\resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\ohadv\Desktop\yammi - app\routes\orders.py", line 23, in get
+    return Response(json.dumps(orders_response),  mimetype='application/json')
+  File "C:\ProgramData\Anaconda3\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\ProgramData\Anaconda3\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\ProgramData\Anaconda3\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\ProgramData\Anaconda3\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type datetime is not JSON serializable
+2021-09-23 18:15:10,720 INFO werkzeug Thread-5 : 127.0.0.1 - - [23/Sep/2021 18:15:10] "GET /Orders/ HTTP/1.1" 500 -
+2021-09-23 18:17:01,131 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 18:17:02,727 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 18:17:02] "GET / HTTP/1.1" 200 -
+2021-09-23 18:17:02,860 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 18:17:02] "GET /swagger.json HTTP/1.1" 200 -
+2021-09-23 18:17:02,962 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 18:17:02] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2021-09-23 18:17:07,001 INFO app Thread-4 : <class 'str'>
+2021-09-23 18:17:07,011 INFO app Thread-4 : An order was received called "string"
+2021-09-23 18:17:07,012 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 18:17:07] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 18:17:10,785 ERROR app Thread-5 : Exception on /Orders/ [GET]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_restplus\api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_restplus\resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\ohadv\Desktop\yammi - app\routes\orders.py", line 21, in get
+    orders_response = db_utils.filter_last_day_orders()
+  File "C:\Users\ohadv\Desktop\yammi - app\utils\db_utils.py", line 17, in filter_last_day_orders
+    str_date = datetime.stfptime(order['date'], '%Y-%m-%d')
+AttributeError: type object 'datetime.datetime' has no attribute 'stfptime'
+2021-09-23 18:17:10,789 INFO werkzeug Thread-5 : 127.0.0.1 - - [23/Sep/2021 18:17:10] "GET /Orders/ HTTP/1.1" 500 -
+2021-09-23 18:17:43,704 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 18:17:45,567 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 18:17:45] "GET / HTTP/1.1" 200 -
+2021-09-23 18:17:45,680 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 18:17:45] "GET /swagger.json HTTP/1.1" 200 -
+2021-09-23 18:17:45,812 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 18:17:45] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2021-09-23 18:17:49,601 INFO app Thread-4 : <class 'str'>
+2021-09-23 18:17:49,612 INFO app Thread-4 : An order was received called "string"
+2021-09-23 18:17:49,613 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 18:17:49] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 18:17:52,865 INFO app Thread-5 : Retrieved 1 orders from the last day 
+2021-09-23 18:17:52,865 INFO werkzeug Thread-5 : 127.0.0.1 - - [23/Sep/2021 18:17:52] "GET /Orders/ HTTP/1.1" 200 -
+2021-09-23 18:19:56,542 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 18:20:12,870 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 18:20:12] "POST /Orders HTTP/1.1" 308 -
+2021-09-23 18:20:12,873 INFO app Thread-2 : <class 'str'>
+2021-09-23 18:20:12,876 INFO app Thread-2 : An order was received called "aaaa"
+2021-09-23 18:20:12,876 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 18:20:12] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 18:20:17,790 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 18:20:17] "GET /Orders HTTP/1.1" 308 -
+2021-09-23 18:20:18,305 INFO app Thread-4 : Retrieved 1 orders from the last day 
+2021-09-23 18:20:18,306 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 18:20:18] "GET /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:18:54,120 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 19:19:37,870 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 19:19:37] "POST /Orders HTTP/1.1" 308 -
+2021-09-23 19:19:37,876 INFO app Thread-2 : <class 'str'>
+2021-09-23 19:19:37,877 INFO app Thread-2 : An order was received called "aaaa"
+2021-09-23 19:19:37,878 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 19:19:37] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:19:42,064 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 19:19:42] "POST /Orders HTTP/1.1" 308 -
+2021-09-23 19:19:42,067 INFO app Thread-4 : <class 'str'>
+2021-09-23 19:19:42,067 INFO app Thread-4 : An order was received called "vvv"
+2021-09-23 19:19:42,067 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 19:19:42] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:19:45,063 INFO werkzeug Thread-5 : 127.0.0.1 - - [23/Sep/2021 19:19:45] "GET /Orders HTTP/1.1" 308 -
+2021-09-23 19:19:45,580 INFO app Thread-6 : Retrieved 2 orders from the last day 
+2021-09-23 19:19:45,580 INFO werkzeug Thread-6 : 127.0.0.1 - - [23/Sep/2021 19:19:45] "GET /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:25:07,491 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 19:25:15,875 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 19:25:15] "POST /Orders HTTP/1.1" 308 -
+2021-09-23 19:25:15,887 ERROR app Thread-2 : Exception on /Orders/ [POST]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_restplus\api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_restplus\resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\ohadv\Desktop\yammi - app\routes\orders.py", line 31, in post
+    db_utils.validate_order(api.payload)
+  File "C:\Users\ohadv\Desktop\yammi - app\utils\db_utils.py", line 42, in validate_order
+    if order[key] > today_date : raise ValueError()
+TypeError: can't compare datetime.datetime to datetime.date
+2021-09-23 19:25:15,890 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 19:25:15] "POST /Orders/ HTTP/1.1" 500 -
+2021-09-23 19:25:57,357 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 19:25:58,487 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 19:25:58] "POST /Orders HTTP/1.1" 308 -
+2021-09-23 19:25:58,492 INFO app Thread-2 : An order was received called "vvv"
+2021-09-23 19:25:58,492 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 19:25:58] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:26:03,793 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 19:26:03] "POST /Orders HTTP/1.1" 308 -
+2021-09-23 19:26:03,796 INFO app Thread-4 : Incorrect data format, should be YYYY-MM-DD and not future date
+2021-09-23 19:26:03,796 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 19:26:03] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:30:16,160 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 19:30:20,889 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 19:30:20] "POST /Orders HTTP/1.1" 308 -
+2021-09-23 19:30:20,900 INFO app Thread-2 : Future date value or date format differ from YYYY-MM-DD are not allowed 
+2021-09-23 19:30:20,900 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 19:30:20] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:30:30,215 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 19:30:30] "POST /Orders HTTP/1.1" 308 -
+2021-09-23 19:30:30,223 INFO app Thread-4 : An order was received called "vvv"
+2021-09-23 19:30:30,224 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 19:30:30] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:31:38,908 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 19:31:41,188 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 19:31:41] "POST /Orders HTTP/1.1" 308 -
+2021-09-23 19:31:41,194 INFO app Thread-2 : An order was received called "vvv"
+2021-09-23 19:31:41,195 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 19:31:41] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:31:45,242 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 19:31:45] "POST /Orders HTTP/1.1" 308 -
+2021-09-23 19:31:45,247 INFO app Thread-4 : Only today date and YYYY-MM-DD date format are allowed
+2021-09-23 19:31:45,248 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 19:31:45] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:31:49,022 INFO werkzeug Thread-5 : 127.0.0.1 - - [23/Sep/2021 19:31:49] "POST /Orders HTTP/1.1" 308 -
+2021-09-23 19:31:49,025 INFO app Thread-6 : Only today date and YYYY-MM-DD date format are allowed
+2021-09-23 19:31:49,026 INFO werkzeug Thread-6 : 127.0.0.1 - - [23/Sep/2021 19:31:49] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:31:53,635 INFO werkzeug Thread-7 : 127.0.0.1 - - [23/Sep/2021 19:31:53] "POST /Orders HTTP/1.1" 308 -
+2021-09-23 19:31:53,638 INFO app Thread-8 : An order was received called "d"
+2021-09-23 19:31:53,638 INFO werkzeug Thread-8 : 127.0.0.1 - - [23/Sep/2021 19:31:53] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:31:59,304 INFO werkzeug Thread-9 : 127.0.0.1 - - [23/Sep/2021 19:31:59] "POST /Orders HTTP/1.1" 308 -
+2021-09-23 19:31:59,308 INFO app Thread-10 : Only today date and YYYY-MM-DD date format are allowed
+2021-09-23 19:31:59,309 INFO werkzeug Thread-10 : 127.0.0.1 - - [23/Sep/2021 19:31:59] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:36:06,627 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 19:36:10,066 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 19:36:10] "POST /Orders HTTP/1.1" 308 -
+2021-09-23 19:36:10,074 INFO app Thread-2 : Only today date and YYYY-MM-DD date format are allowed
+2021-09-23 19:36:10,074 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 19:36:10] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:36:10,448 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 19:36:10] "POST /Orders HTTP/1.1" 308 -
+2021-09-23 19:36:10,450 INFO app Thread-4 : Only today date and YYYY-MM-DD date format are allowed
+2021-09-23 19:36:10,451 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 19:36:10] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:36:14,773 INFO werkzeug Thread-5 : 127.0.0.1 - - [23/Sep/2021 19:36:14] "POST /Orders HTTP/1.1" 308 -
+2021-09-23 19:36:14,780 INFO app Thread-6 : An order was received called "d"
+2021-09-23 19:36:14,781 INFO werkzeug Thread-6 : 127.0.0.1 - - [23/Sep/2021 19:36:14] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:36:35,190 INFO werkzeug Thread-7 : 127.0.0.1 - - [23/Sep/2021 19:36:35] "POST /Orders HTTP/1.1" 308 -
+2021-09-23 19:36:35,193 INFO app Thread-8 : An order was received called "aa"
+2021-09-23 19:36:35,193 INFO werkzeug Thread-8 : 127.0.0.1 - - [23/Sep/2021 19:36:35] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:37:35,017 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 19:37:40,324 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 19:37:40] "GET / HTTP/1.1" 200 -
+2021-09-23 19:37:40,516 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 19:37:40] "GET /swagger.json HTTP/1.1" 200 -
+2021-09-23 19:37:40,526 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 19:37:40] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2021-09-23 19:37:45,264 INFO app Thread-4 : An order was received called "string"
+2021-09-23 19:37:45,266 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 19:37:45] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:37:51,085 INFO app Thread-5 : Only today's date and YYYY-MM-DD date format are allowed
+2021-09-23 19:37:51,085 INFO werkzeug Thread-5 : 127.0.0.1 - - [23/Sep/2021 19:37:51] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:38:21,875 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 19:38:23,433 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 19:38:23] "GET / HTTP/1.1" 200 -
+2021-09-23 19:38:23,640 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 19:38:23] "GET /swagger.json HTTP/1.1" 200 -
+2021-09-23 19:38:23,650 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 19:38:23] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2021-09-23 19:38:27,946 INFO app Thread-4 : An order was received called "string"
+2021-09-23 19:38:27,947 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 19:38:27] "POST /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:38:33,313 INFO app Thread-5 : Only today's date and YYYY-MM-DD date format are allowed
+2021-09-23 19:38:33,313 INFO werkzeug Thread-5 : 127.0.0.1 - - [23/Sep/2021 19:38:33] "POST /Orders/ HTTP/1.1" 400 -
+2021-09-23 19:40:59,388 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:40:59,393 INFO app MainThread : Only today's date and YYYY-MM-DD date format are allowed
+2021-09-23 19:40:59,394 INFO app MainThread : Only today's date and YYYY-MM-DD date format are allowed
+2021-09-23 19:40:59,394 INFO app MainThread : Only today's date and YYYY-MM-DD date format are allowed
+2021-09-23 19:40:59,396 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:40:59,397 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:40:59,399 INFO app MainThread : Only today's date and YYYY-MM-DD date format are allowed
+2021-09-23 19:40:59,400 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:41:14,520 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:41:14,526 INFO app MainThread : Only today's date and YYYY-MM-DD date format are allowed
+2021-09-23 19:41:14,527 INFO app MainThread : Only today's date and YYYY-MM-DD date format are allowed
+2021-09-23 19:41:14,527 INFO app MainThread : Only today's date and YYYY-MM-DD date format are allowed
+2021-09-23 19:41:14,528 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:41:14,530 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:41:14,531 INFO app MainThread : Only today's date and YYYY-MM-DD date format are allowed
+2021-09-23 19:41:14,532 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:41:36,397 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:41:36,402 INFO app MainThread : Only today's date and YYYY-MM-DD date format are allowed
+2021-09-23 19:41:36,403 INFO app MainThread : Only today's date and YYYY-MM-DD date format are allowed
+2021-09-23 19:41:36,404 INFO app MainThread : Only today's date and YYYY-MM-DD date format are allowed
+2021-09-23 19:41:36,405 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:41:36,406 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:41:36,407 INFO app MainThread : Only today's date and YYYY-MM-DD date format are allowed
+2021-09-23 19:41:36,408 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:43:17,320 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:43:17,326 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:44:09,003 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 19:44:09,197 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 19:44:09] "GET / HTTP/1.1" 200 -
+2021-09-23 19:44:09,394 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 19:44:09] "GET /swagger.json HTTP/1.1" 200 -
+2021-09-23 19:44:09,396 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 19:44:09] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2021-09-23 19:44:12,721 INFO app Thread-4 : There is no orders to retrieve.
+2021-09-23 19:44:12,722 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 19:44:12] "GET /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:44:49,124 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 19:44:52,124 INFO app Thread-1 : There is no orders to retrieve.
+2021-09-23 19:44:52,126 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 19:44:52] "GET /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:45:13,577 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-23 19:45:14,802 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Sep/2021 19:45:14] "GET / HTTP/1.1" 200 -
+2021-09-23 19:45:14,882 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Sep/2021 19:45:14] "GET /swagger.json HTTP/1.1" 200 -
+2021-09-23 19:45:15,050 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Sep/2021 19:45:15] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2021-09-23 19:45:21,047 INFO app Thread-4 : There is no orders to retrieve.
+2021-09-23 19:45:21,048 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Sep/2021 19:45:21] "GET /Orders/ HTTP/1.1" 200 -
+2021-09-23 19:46:10,716 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:46:10,720 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:46:51,205 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:46:51,210 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:48:09,960 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:48:09,964 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:48:09,968 INFO app MainThread : An order was received called "Pizza"
+2021-09-23 19:48:09,968 INFO app MainThread : Retrieved 1 orders from the last day 
+2021-09-23 19:48:28,335 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:48:28,340 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:48:28,343 INFO app MainThread : An order was received called "Pizza"
+2021-09-23 19:48:28,343 INFO app MainThread : Retrieved 1 orders from the last day 
+2021-09-23 19:52:08,851 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:52:08,855 INFO app MainThread : There is no orders to retrieve.
+2021-09-23 19:52:08,859 INFO app MainThread : An order was received called "Pizza"
+2021-09-23 19:52:08,860 INFO app MainThread : Retrieved 1 orders from the last day 
+2021-09-24 19:23:30,099 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-24 19:23:37,855 INFO app MainThread : There is no orders to retrieve.
+2021-09-24 19:23:37,861 INFO app MainThread : An order was received called "Pizza"
+2021-09-24 19:23:37,862 INFO app MainThread : An order was received called "Hamburger"
+2021-09-24 19:23:37,862 INFO app MainThread : An order was received called "Pancake"
+2021-09-24 19:23:37,863 INFO app MainThread : Retrieved 3 orders from the last day 
+2021-09-24 19:23:37,864 INFO app MainThread : There is no orders to retrieve.
+2021-09-24 19:23:37,865 INFO app MainThread : An order was received called "Pizza"
+2021-09-24 19:23:37,866 INFO app MainThread : Retrieved 1 orders from the last day 
+2021-09-24 19:24:06,928 INFO app MainThread : There is no orders to retrieve.
+2021-09-24 19:24:06,934 INFO app MainThread : An order was received called "Pizza"
+2021-09-24 19:24:06,935 INFO app MainThread : An order was received called "Hamburger"
+2021-09-24 19:24:06,935 INFO app MainThread : Only today's date and YYYY-MM-DD date format are allowed
+2021-09-24 19:24:06,936 INFO app MainThread : Retrieved 2 orders from the last day 
+2021-09-24 19:24:06,937 INFO app MainThread : There is no orders to retrieve.
+2021-09-24 19:24:06,938 INFO app MainThread : An order was received called "Pizza"
+2021-09-24 19:24:06,939 INFO app MainThread : Retrieved 1 orders from the last day 
+2021-09-24 19:24:18,462 INFO app MainThread : There is no orders to retrieve.
+2021-09-24 19:24:18,468 INFO app MainThread : An order was received called "Pizza"
+2021-09-24 19:24:18,469 INFO app MainThread : An order was received called "Hamburger"
+2021-09-24 19:24:18,469 INFO app MainThread : Only today's date and YYYY-MM-DD date format are allowed
+2021-09-24 19:24:18,470 INFO app MainThread : Retrieved 2 orders from the last day 
+2021-09-24 19:24:18,471 INFO app MainThread : There is no orders to retrieve.
+2021-09-24 19:24:18,472 INFO app MainThread : An order was received called "Pizza"
+2021-09-24 19:24:18,473 INFO app MainThread : Retrieved 1 orders from the last day 
