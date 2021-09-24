@@ -19,3 +19,5 @@
 * type python test.py
 
 
+4) Log file can be accessed through record.log
+
